@@ -6,10 +6,12 @@ class App < Sinatra::Base
     erb: 'index.html'
   end
   
-  get ''
-  <form method="POST" action="/food">
-  <p>Your Name: <input type="text" name="name"></p>
-  <p>Your Favorite Food: <input type="text" name="favorite_food"></p>
-  <input type="submit">
-  </form>
+  get 'views/food_form.erb' do
+    <form method="POST" action="/food>
+    <p>Your Name: <input type="text" name="name"></p>
+    <p>Your Favorite Food: <input type="text" name="favorite_food"></p>
+    <input type="submit">
+    </form>
+    
+  end
 end
